@@ -1,3 +1,5 @@
+package com.javabeans.model;
+
 public class Product {
     public String name;
     private double price;
@@ -17,6 +19,8 @@ public class Product {
     }
 
     public void setName(String name) {
+
+
             if(name.isBlank()){
         throw new IllegalArgumentException("name can not be empty bro");
     }
@@ -31,10 +35,6 @@ public class Product {
             if(price < 0.0){
         throw new IllegalArgumentException("Price cannot be negative");
     }
-        // if(price <0.0){
-        //     throw new IllegalAccessException("Price can not be negative") ;
-        // }
-
         this.price = price;
     }
 
@@ -49,10 +49,3 @@ public class Product {
         System.out.println(this.toString());
     }
 }
-    //valiation 
-//     //methods
-//     public void printInfo(){
-//         System.out.println("Name: " + this.name);
-//         System.out.println("Price: " + this.price);
-//     }
-// }=
