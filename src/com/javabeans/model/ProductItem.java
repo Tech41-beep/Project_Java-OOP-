@@ -2,11 +2,11 @@ package com.javabeans.model;
 
 public class ProductItem {
     private Product product;
-    private double Quantities;
+    private double quantities;
 
     public ProductItem(Product product, double quantities) {
         this.product = product;
-        this.Quantities = quantities;
+        this.quantities = quantities;
     }
     
     public void setProduct(Product product) {
@@ -20,21 +20,21 @@ public class ProductItem {
     }
  
     public double getQuantities() {
-        return Quantities;
+        return quantities;
     }
     public void setQuantities(double quantities) {
         if(quantities < 0) {
             throw new IllegalArgumentException("Quantities cannot be negative");
         }
-        this.Quantities = quantities;
+        this.quantities = quantities;
     }
     public double getTotalPrice() {
-        return product.getPrice() * Quantities;
+        return product.getPrice() * quantities;
     }
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return product.getName() + "\t\t" + Quantities + "\t\t" + getTotalPrice();
+        return product.getName() + "\t\t" + quantities + "\t\t" + getTotalPrice();
     }
 
 }

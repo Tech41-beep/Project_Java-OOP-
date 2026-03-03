@@ -14,7 +14,7 @@ public class Product {
         return price; 
     }
     public String getName() {
-         return name; 
+        return name; 
         }
 
     public void printInfo() {
